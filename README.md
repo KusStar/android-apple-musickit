@@ -1,14 +1,9 @@
-# android-example
+# android-apple-musickit
 
-[![Release](https://jitpack.io/v/jitpack/android-example.svg)](https://jitpack.io/#jitpack/android-example)
+Publish Apple MusicKit for Android to jitpack.io
 
-Example Android library project that works with jitpack.io.
-
-See this [Tutorial](https://medium.com/@ome450901/publish-an-android-library-by-jitpack-a0342684cbd0) on how to publish an Android Library with JitPack.
-
-For more details check out the [documentation](https://github.com/jitpack/jitpack.io/blob/master/ANDROID.md)
-
-https://jitpack.io/#jitpack/android-example
+https://developer.apple.com/download/all/?q=Android%20MusicKit
+https://developer.apple.com/musickit/android/
 
 Add it to your build.gradle with:
 ```gradle
@@ -18,38 +13,12 @@ allprojects {
     }
 }
 ```
+
 and:
 
 ```gradle
 dependencies {
-    compile 'com.github.jitpack:android-example:{latest version}'
+    implementation "com.github.kusstar.android-apple-musickit:apple_musickitauth:893b2c98ab"
+    implementation "com.github.kusstar.android-apple-musickit:apple_mediaplayback:893b2c98ab"
 }
-```
-
-## Multiple build variants
-
-If your library uses multiple flavours then see this example:
-https://github.com/jitpack-io/android-jitpack-library-example
-
-## Adding the maven plugin
-
-To enable installing into local maven repository and JitPack you need to add the [android-maven](https://github.com/dcendents/android-maven-gradle-plugin) plugin:
-
-1. Add `classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'` to root build.gradle under `buildscript { dependencies {`
-2. Add `com.github.dcendents.android-maven` to the library/build.gradle
-
-After these changes you should be able to run:
-
-    ./gradlew install
-    
-from the root of your project. If install works and you have added a GitHub release it should work on jitpack.io
-
-## Adding a sample app 
-
-If you add a sample app to the same repo then your app needs to have a dependency on the library. To do this in your app/build.gradle add:
-
-```gradle
-    dependencies {
-        compile project(':library')
-    }
 ```
