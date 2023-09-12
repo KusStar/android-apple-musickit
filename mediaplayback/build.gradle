@@ -1,0 +1,21 @@
+plugins {
+    id "com.android.library"
+    id "maven-publish"
+}
+
+android {
+    compileSdkVersion 34
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            mediaplayback(MavenPublication) {
+                groupId = 'com.github.kusstar'
+                artifactId = 'apple_mediaplayback'
+                version = '1.1.1.patched-1'
+                artifact("libs/mediaplayback-1.1.1.patched.aar")
+            }
+        }
+    }
+}

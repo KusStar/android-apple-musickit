@@ -1,0 +1,2 @@
+include ':mediaplayback'
+include ':musickitauth'

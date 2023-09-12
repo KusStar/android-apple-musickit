@@ -1,0 +1,21 @@
+plugins {
+    id "com.android.library"
+    id "maven-publish"
+}
+
+android {
+    compileSdkVersion 30
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            musickitauth(MavenPublication) {
+                groupId = 'com.github.kusstar'
+                artifactId = 'apple_musickitauth'
+                version = '1.1.2.patched-1'
+                artifact("libs/musickitauth-1.1.2.patched.aar")
+            }
+        }
+    }
+}
